@@ -14,6 +14,7 @@ import com.devsuperior.hrpayroll.services.PaymentService;
 @RequestMapping(value = "/payments")
 public class PaymentResource {
 
+	
 	@Autowired
 	private PaymentService service;
 	
@@ -21,6 +22,8 @@ public class PaymentResource {
 	@GetMapping(value = "/{workerId}/days/{days}")
 	public ResponseEntity<Payment> getPayment(@PathVariable Long workerId, @PathVariable Integer days){
 
+		
+		
 		Payment payment = service.getPayment(workerId, days);
 		
 		return ResponseEntity.ok(payment);

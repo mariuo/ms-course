@@ -11,7 +11,7 @@ import com.devsuperior.hrpayroll.entities.Worker;
 
 
 @Component
-@FeignClient(name = "hrworker", url = "localhost:8001", path = "/workers")
+@FeignClient(name = "hrworker", path = "/workers")
 public interface WorkerFeignClient {
 
 	
